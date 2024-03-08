@@ -1,0 +1,471 @@
+/* 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet"> */
+
+/*
+font-family: "Josefin Sans", sans-serif; 
+ font-family: "Alata", sans-serif;
+ */
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  --Dark-Gray: hsl(0, 0%, 55%);
+  --Very-Dark-Gray: hsl(0, 0%, 41%);
+  --ff-jose: "Josefin Sans", sans-serif;
+  --ff-alata: "Alata", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+picture img {
+  width: 100%;
+  display: block;
+}
+ul {
+  list-style: none;
+}
+main {
+  max-width: 375px;
+  min-width: 320px;
+}
+header {
+  min-height: 100vh;
+  background: url("./images/mobile/image-hero.jpg") no-repeat center/cover;
+  padding: 2.5rem 1.5rem;
+  color: var(--White);
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  display: none;
+}
+
+nav .icon-close {
+  display: none;
+}
+/* active */
+nav.active .hamburger {
+  display: none;
+}
+nav.active .icon-close {
+  display: block;
+  margin-top: 5px;
+}
+nav.active {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--Black);
+  padding: 2.5rem 2rem;
+  align-items: start;
+}
+
+nav.active ul {
+  display: block;
+  position: absolute;
+  margin-top: 40%;
+  font-family: var(--ff-jose);
+  font-weight: 300;
+}
+
+nav.active ul li {
+  margin: 1.8rem 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+/* end of active states */
+h1 {
+  border: 2px solid var(--White);
+  text-transform: uppercase;
+  font-family: var(--ff-jose);
+  font-weight: 300;
+  font-size: 2.6rem;
+  padding: 1rem;
+  margin-top: 25vh;
+}
+
+section {
+  padding: 6rem 1.5rem;
+}
+
+.content {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.content h2 {
+  font-family: var(--ff-jose);
+  font-weight: 300;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.content p {
+  padding: 1rem 0.5rem;
+  color: var(--Very-Dark-Gray);
+  font-family: var(--ff-alata);
+}
+
+.heading button {
+  display: none;
+}
+.heading h2 {
+  font-family: var(--ff-jose);
+  font-weight: 300;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem 0 2.5rem 0;
+}
+
+.creations-image {
+  color: var(--White);
+  display: grid;
+  row-gap: 2rem;
+}
+.custom {
+  display: flex;
+  align-items: end;
+  height: 120px;
+}
+.custom p {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-family: var(--ff-jose);
+  font-weight: 300;
+  width: 60%;
+  padding: 0rem 2rem 1.2rem 1.2rem;
+}
+.earth {
+  background: url("./images/mobile/image-deep-earth.jpg") center/cover;
+}
+.arcade {
+  background: url("./images/mobile/image-night-arcade.jpg") center/cover;
+  opacity: 1;
+}
+
+.arcade p {
+  background-color: rgba(0, 0, 0, 0.359);
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+}
+.team {
+  background: url("./images/mobile/image-soccer-team.jpg") center/cover;
+}
+.grid {
+  background: url("./images/mobile/image-grid.jpg") center/cover;
+}
+.grid p {
+  width: 40%;
+}
+.above {
+  background: url("./images/mobile/image-from-above.jpg") center/cover;
+}
+.borealis {
+  background: url("./images/mobile/image-pocket-borealis.jpg") center/cover;
+}
+.curiosity {
+  background: url("./images/mobile/image-curiosity.jpg") center/cover;
+}
+.fisheye {
+  background: url("./images/mobile/image-fisheye.jpg") center/cover;
+}
+
+button {
+  background: transparent;
+  text-transform: uppercase;
+  padding: 0.5rem 2.5rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem;
+  outline: none;
+  font-family: var(--ff-alata);
+  letter-spacing: 0.5rem;
+}
+
+footer {
+  background-color: var(--Black);
+  color: var(--White);
+  padding: 3rem 0;
+  text-align: center;
+  font-family: var(--ff-alata);
+}
+
+.footer-nav li {
+  text-transform: capitalize;
+  margin: 1rem;
+}
+
+.footnote {
+  margin: 3rem 0 1rem 0;
+}
+.brand-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.footnote p {
+  color: var(--Dark-Gray);
+}
+
+@media screen and (min-width: 400px) {
+  main {
+    max-width: 1440px;
+    width: 100%;
+  }
+  header {
+    background: url("./images/desktop/image-hero.jpg") no-repeat center/cover;
+    padding: 2.5rem 0;
+  }
+  .custom-w {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .active {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    gap: 2rem;
+    font-family: var(--ff-alata);
+    font-weight: 400;
+    cursor: pointer;
+  }
+  nav li {
+    position: relative;
+  }
+  nav li:hover::after {
+    content: "";
+    display: block;
+    background-color: var(--White);
+    position: absolute;
+    left: 25%;
+    width: 25px;
+    height: 2px;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+  }
+
+  nav.active .icon-close {
+    display: none;
+  }
+  nav .hamburger {
+    display: none;
+  }
+
+  h1 {
+    width: 58%;
+    font-size: 4.3rem;
+    padding: 2rem;
+  }
+
+  section {
+    padding: 10rem 0;
+  }
+
+  .interactive-vr {
+    display: flex;
+    position: relative;
+    margin-bottom: 5rem;
+  }
+
+  .content {
+    position: absolute;
+    background-color: var(--White);
+    width: 48%;
+    right: 0rem;
+    bottom: 0rem;
+    padding: 5rem 0rem 0 5rem;
+    text-align: start;
+  }
+  .content h2 {
+    font-size: 3rem;
+    margin: 1rem 0;
+  }
+  .content p {
+    padding: 1rem 0 0 0;
+    line-height: 1.5rem;
+    font-size: 15px;
+  }
+
+  .creations {
+    margin-top: 7rem;
+  }
+
+  .heading button {
+    display: block;
+    margin: 0;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  .heading button:hover {
+    background-color: var(--Black);
+    color: var(--White);
+  }
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid red; */
+    padding: 3rem 0;
+  }
+  .heading h2 {
+    padding: 0;
+    font-size: 3rem;
+  }
+  .creations > button {
+    display: none;
+  }
+
+  .custom {
+    height: 100%;
+    position: relative;
+  }
+  .custom p {
+    width: 90%;
+    font-size: 2.2rem;
+    padding: 0rem 0rem 2rem 2rem;
+    z-index: 1000;
+  }
+  .creations-image {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: repeat(2, 450px);
+    gap: 1.7rem;
+  }
+
+  .earth {
+    background: url("./images/desktop/image-deep-earth.jpg") center/cover;
+  }
+  .arcade {
+    background: url("./images/desktop/image-night-arcade.jpg") center/cover;
+    position: relative;
+  }
+
+  .arcade p {
+    background-color: transparent;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: end;
+  }
+
+  .custom::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.201);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+  }
+  .custom:hover::after {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.401);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  .custom:hover {
+    color: black;
+  }
+  .team {
+    background: url("./images/desktop/image-soccer-team.jpg") center/cover;
+  }
+  .grid {
+    background: url("./images/desktop/image-grid.jpg") center/cover;
+  }
+  .grid p {
+    width: 50%;
+  }
+  .above {
+    background: url("./images/desktop/image-from-above.jpg") center/cover;
+  }
+  .borealis {
+    background: url("./images/desktop/image-pocket-borealis.jpg") center/cover;
+  }
+  .curiosity {
+    background: url("./images/desktop/image-curiosity.jpg") center/cover;
+  }
+  .fisheye {
+    background: url("./images/desktop/image-fisheye.jpg") center/cover;
+  }
+
+  footer .custom-w {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-nav {
+    text-align: start;
+  }
+  .footer-nav ul {
+    display: flex;
+    gap: 3rem;
+    margin-top: 1rem;
+  }
+
+  .footer-nav li {
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+  }
+  .footer-nav li:hover::after {
+    content: "";
+    display: block;
+    background-color: var(--White);
+    position: absolute;
+    left: 25%;
+    width: 25px;
+    height: 2px;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+  }
+  .footnote {
+    margin: 0;
+  }
+
+  .brand-icons {
+    margin-top: 0;
+  }
+
+  .brand-icons li {
+    position: relative;
+    cursor: pointer;
+  }
+  .brand-icons li:hover::after {
+    content: "";
+    display: block;
+    background-color: var(--White);
+    position: absolute;
+    left: 2%;
+    width: 25px;
+    height: 2px;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+  }
+}
